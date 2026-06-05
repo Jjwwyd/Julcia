@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kaczi - Karta Postaci</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f0b14;
+    color:#f3e9ff;
+    font-family:Segoe UI, sans-serif;
+    padding:30px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    background:#1a1324;
+    border:2px solid #b347ff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 0 25px rgba(179,71,255,0.4);
+}
+
+.header{
+    background:linear-gradient(135deg,#2b133d,#5b1c74,#c2188f);
+    padding:30px;
+}
+
+.header h1{
+    font-size:3rem;
+}
+
+.subtitle{
+    margin-top:10px;
+    color:#ffd4ff;
+}
+
+.tabs{
+    display:flex;
+    background:#140f1d;
+}
+
+.tabs button{
+    flex:1;
+    padding:15px;
+    border:none;
+    background:#140f1d;
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+    transition:0.3s;
+}
+
+.tabs button:hover{
+    background:#2b133d;
+}
+
+.tab-content{
+    display:none;
+    padding:25px;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.box{
+    background:#241832;
+    padding:15px;
+    border-radius:12px;
+    border:1px solid #5e2f7e;
+}
+
+.box strong{
+    color:#ff80d5;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+
+.stat{
+    background:#241832;
+    text-align:center;
+    padding:15px;
+    border-radius:12px;
+    border:1px solid #5e2f7e;
+}
+
+.stat h3{
+    color:#ff80d5;
+    margin-bottom:10px;
+}
+
+.section-title{
+    color:#ff80d5;
+    margin-bottom:15px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.spell-level{
+    margin-top:20px;
+    padding:15px;
+    background:#241832;
+    border-radius:12px;
+    border-left:4px solid #c2188f;
+}
+
+.spell-level h3{
+    color:#ff80d5;
+    margin-bottom:10px;
+}
+
+textarea{
+    width:100%;
+    min-height:200px;
+    background:#241832;
+    color:white;
+    border:1px solid #5e2f7e;
+    border-radius:10px;
+    padding:15px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="header">
+    <h1>Kaczi</h1>
+    <div class="subtitle">
+        Człowiek Dhampir • Wizard (Mag) • Poziom 1 • Barovia
+    </div>
+</div>
+
+<div class="tabs">
+    <button onclick="openTab('postac')">Postać</button>
+    <button onclick="openTab('ekwipunek')">Ekwipunek</button>
+    <button onclick="openTab('czary')">Czary</button>
+</div>
+
+<div id="postac" class="tab-content active">
+
+<h2 class="section-title">Informacje</h2>
+
+<div class="info-grid">
+    <div class="box"><strong>Imię:</strong> Kaczi</div>
+    <div class="box"><strong>Rasa:</strong> Człowiek Dhampir</div>
+    <div class="box"><strong>Klasa:</strong> Wizard (Mag)</div>
+    <div class="box"><strong>Poziom:</strong> 1</div>
+    <div class="box"><strong>Pochodzenie:</strong> Wieś Barovia</div>
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>Siła</h3>
+<p>—</p>
+</div>
+
+<div class="stat">
+<h3>Zręczność</h3>
+<p>—</p>
+</div>
+
+<div class="stat">
+<h3>Kondycja</h3>
+<p>—</p>
+</div>
+
+<div class="stat">
+<h3>Inteligencja</h3>
+<p>—</p>
+</div>
+
+<div class="stat">
+<h3>Mądrość</h3>
+<p>—</p>
+</div>
+
+<div class="stat">
+<h3>Charyzma</h3>
+<p>—</p>
+</div>
+
+</div>
+
+<br>
+
+<h2 class="section-title">Historia</h2>
+
+<textarea placeholder="Historia postaci..."></textarea>
+
+</div>
+
+<div id="ekwipunek" class="tab-content">
+
+<h2 class="section-title">Podstawowy ekwipunek Maga</h2>
+
+<ul>
+<li>Księga zaklęć (Spellbook)</li>
+<li>Komponentowa sakiewka (Component Pouch)</li>
+<li>Sztylet</li>
+<li>Arcane Focus</li>
+<li>Plecak uczonego (Scholar's Pack)</li>
+<li>Księga wiedzy</li>
+<li>Kałamarz</li>
+<li>Pióro</li>
+<li>10 arkuszy pergaminu</li>
+<li>Mała torba</li>
+<li>Zestaw podróżnych ubrań</li>
+<li>10 sztuk złota</li>
+</ul>
+
+</div>
+
+<div id="czary" class="tab-content">
+
+<h2 class="section-title">Czary Maga (Poziom 1)</h2>
+
+<div class="spell-level">
+<h3>Cantripy</h3>
+<ul>
+<li>Fire Bolt</li>
+<li>Mage Hand</li>
+<li>Prestidigitation</li>
+</ul>
+</div>
+
+<div class="spell-level">
+<h3>Zaklęcia 1. poziomu w księdze</h3>
+<ul>
+<li>Magic Missile</li>
+<li>Shield</li>
+<li>Mage Armor</li>
+<li>Sleep</li>
+<li>Detect Magic</li>
+<li>Identify</li>
+</ul>
+</div>
+
+<div class="spell-level">
+<h3>Przygotowane zaklęcia</h3>
+<ul>
+<li>Magic Missile</li>
+<li>Shield</li>
+<li>Mage Armor</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openTab(tabName){
+
+let tabs=document.getElementsByClassName("tab-content");
+
+for(let i=0;i<tabs.length;i++){
+tabs[i].classList.remove("active");
+}
+
+document.getElementById(tabName).classList.add("active");
+}
+
+</script>
+
+</body>
+</html>
