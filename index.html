@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaczi - Karta Postaci</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Georgia, serif;
+    background:#0d0b10;
+    color:#e8e1ea;
+}
+
+/* KONTAINER */
+.wrapper{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* GŁÓWNA KARTA */
+.card{
+    background:#1b1422;
+    border:1px solid #4b2f4e;
+    border-radius:16px;
+    overflow:hidden;
+}
+
+/* HEADER */
+.header{
+    padding:25px;
+    background:#24152c;
+    border-bottom:1px solid #4b2f4e;
+}
+
+.header h1{
+    margin:0;
+    font-size:40px;
+    color:#d2a4c5;
+    letter-spacing:1px;
+}
+
+.header p{
+    margin:5px 0 0;
+    color:#c9b3d0;
+}
+
+/* TABS */
+.tabs{
+    display:flex;
+    background:#140f18;
+}
+
+.tabs label{
+    flex:1;
+    padding:14px;
+    text-align:center;
+    cursor:pointer;
+    background:#140f18;
+    border-right:1px solid #2b1c33;
+    color:#c9b3d0;
+}
+
+.tabs label:hover{
+    background:#23162a;
+}
+
+input[type="radio"]{
+    display:none;
+}
+
+/* CONTENT */
+.section{
+    display:none;
+    padding:25px;
+}
+
+#tab1:checked ~ .content #s1,
+#tab2:checked ~ .content #s2,
+#tab3:checked ~ .content #s3{
+    display:block;
+}
+
+/* STATY */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:20px;
+}
+
+.stat{
+    background:#241a2c;
+    padding:12px;
+    border:1px solid #3f2a45;
+    border-radius:10px;
+    text-align:center;
+}
+
+.stat span{
+    color:#d2a4c5;
+    font-weight:bold;
+}
+
+/* TABELKI */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+th, td{
+    border:1px solid #3f2a45;
+    padding:8px;
+    text-align:left;
+}
+
+th{
+    background:#241a2c;
+    color:#d2a4c5;
+}
+
+/* SEKCJE */
+h2{
+    color:#d2a4c5;
+    border-bottom:1px solid #3f2a45;
+    padding-bottom:5px;
+}
+
+ul{
+    margin-top:10px;
+}
+
+/* ZAKŁADKI RADIO */
+.tab-buttons{
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="card">
+
+<div class="header">
+<h1>Kaczi</h1>
+<p>Dhampir • Wizard 1 • Vampire Devotee • Barovia</p>
+</div>
+
+<!-- RADIO TABS -->
+<input type="radio" name="tabs" id="tab1" checked>
+<input type="radio" name="tabs" id="tab2">
+<input type="radio" name="tabs" id="tab3">
+
+<div class="tabs">
+<label for="tab1">Postać</label>
+<label for="tab2">Ekwipunek</label>
+<label for="tab3">Czary & Atuty</label>
+</div>
+
+<div class="content">
+
+<!-- POSTAĆ -->
+<div class="section" id="s1">
+
+<h2>Statystyki</h2>
+
+<div class="stats">
+<div class="stat">Siła<br><span>9 (-1)</span></div>
+<div class="stat">Zręczność<br><span>15 (+2)</span></div>
+<div class="stat">Kondycja<br><span>18 (+4)</span></div>
+<div class="stat">Inteligencja<br><span>18 (+4)</span></div>
+<div class="stat">Mądrość<br><span>9 (-1)</span></div>
+<div class="stat">Charyzma<br><span>12 (+1)</span></div>
+</div>
+
+<h2>Pochodzenie</h2>
+<p>Vampire Devotee (Dewotka wampira)</p>
+
+<h2>Historia</h2>
+<p><i>— puste —</i></p>
+
+</div>
+
+<!-- EKWIPUNEK -->
+<div class="section" id="s2">
+
+<h2>Ekwipunek</h2>
+
+<h3>Przedmioty</h3>
+<table>
+<tr><th>Przedmiot</th><th>Ilość</th></tr>
+<tr><td>Magiczny fokus</td><td>1</td></tr>
+<tr><td>Sztylet</td><td>2</td></tr>
+<tr><td>Księga czarów</td><td>1</td></tr>
+<tr><td>Sakiewka</td><td>24 zł</td></tr>
+</table>
+
+<h3>Plecak</h3>
+<table>
+<tr><th>Zawartość</th></tr>
+<tr><td>Eleganckie odzienie</td></tr>
+<tr><td>Butelka atramentu</td></tr>
+<tr><td>Pióro do pisania</td></tr>
+<tr><td>10 arkuszy pergaminu</td></tr>
+<tr><td>Woreczek z piaskiem</td></tr>
+<tr><td>Dwie butelki</td></tr>
+<tr><td>Przyprawy</td></tr>
+<tr><td>Perfumy</td></tr>
+<tr><td>Lampa</td></tr>
+<tr><td>3 fiolki oleju</td></tr>
+</table>
+
+</div>
+
+<!-- CZARY -->
+<div class="section" id="s3">
+
+<h2>Czary (Wizard)</h2>
+
+<h3>Cantripy</h3>
+<ul>
+<li>Fire Bolt</li>
+<li>Mage Hand</li>
+<li>Prestidigitation</li>
+</ul>
+
+<h3>Zaklęcia</h3>
+<ul>
+<li>Magic Missile</li>
+<li>Shield</li>
+<li>Mage Armor</li>
+<li>Detect Magic</li>
+<li>Identify</li>
+<li>Sleep</li>
+</ul>
+
+<h2>Biegłości</h2>
+<ul>
+<li>Perswazja</li>
+<li>Skradanie</li>
+<li>Wiedza tajemna</li>
+<li>Intuicja</li>
+</ul>
+
+<h2>Atuty</h2>
+<ul>
+<li>Vampire's Plaything</li>
+<li>Lucky</li>
+</ul>
+
+<h2>Cechy</h2>
+<ul>
+<li>Widzenie w ciemności (18m)</li>
+<li>Umarła natura (brak potrzeby oddychania)</li>
+<li>Wampirze ugryzienie (1d4 + KON)</li>
+<li>Pajęcze ruchy (wspinaczka)</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
